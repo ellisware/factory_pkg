@@ -19,6 +19,7 @@ $RECYCLE.BIN/
 *.lnk
 
 factory_pkg.egg-info/
+__pycache__/
 
 # =========================
 # Operating System Files
