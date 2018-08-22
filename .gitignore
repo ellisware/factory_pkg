@@ -18,6 +18,8 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+factory_pkg.egg-info/
+
 # =========================
 # Operating System Files
 # =========================
