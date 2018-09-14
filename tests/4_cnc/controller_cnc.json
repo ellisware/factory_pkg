@@ -1,0 +1,11 @@
+{  
+    "id":"controller_cnc00001",
+    "link":{  
+       "instance":"/class/controller_cnc/instance/controller_cnc00001",
+       "latest":"/class/controller_cnc/instance/controller_cnc00001/latest",
+       "history":"/class/controller_cnc/instance/controller_cnc00001/history",
+       "moments":"/class/controller_cnc/instance/controller_cnc00001/moments",
+       "relations":"/class/controller_cnc/instance/controller_cnc00001/relations",
+       "count":"/class/controller_cnc/instance/controller_cnc00001/count"
+    }
+ }

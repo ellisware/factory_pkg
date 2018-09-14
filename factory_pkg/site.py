@@ -1,5 +1,9 @@
 import requests
 import json
+import logging
+
+logger = logging.getLogger(__name__)
+
 from factory_pkg import common
 
 
@@ -20,7 +24,7 @@ class Node:
     def is_type(self):
         ret = ""
         if isinstance(self.controller_id, str) and len(self.controller_id) > 0 :
-            data, valid = json_from_path(["class","controller","instance",self.controller_id,"relations"])
+            data, valid = common.json_from_path(["class","controller","instance",self.controller_id,"relations"])
             if len(data) > 0 and valid:
                 ret = list(data)[0]
         return ret
@@ -44,17 +48,19 @@ class Tag:
 # Site Class
 
 class Site:
-    def __init__(self, path = DEFAULT_XA_SITE):
+    def __init__(self, path = common.DEFAULT_XA_SITE):
         self.nodes = []
         self.tags = []
 
-        nodes_dict, valid = make_request(path + "/node")
+        node_url = common.easy_url(["node"], path)
+        nodes_dict, valid = common.make_request(node_url)
         if valid:
             for node in nodes_dict:
                 temp_node = Node(node)
                 self.nodes.append(temp_node)
             
-        tag_dict, valid = make_request(path + "/tag")
+        tag_url = common.easy_url(["tag"], path)
+        tag_dict, valid = common.make_request(tag_url)
         if valid:
             for tag in tag_dict:
                 temp_tag = Tag(tag)

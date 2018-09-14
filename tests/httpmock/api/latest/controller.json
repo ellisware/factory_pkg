@@ -1,0 +1,6 @@
+{  
+    "manufacturer":"FANUC",
+    "controller_type":"cnc",
+    "model":"31i-B",
+    "ip_address":"192.168.82.52"
+ }

@@ -1,0 +1,20 @@
+[  
+    {  
+       "id":1,
+       "value":"\/xa-site\/files\/356a192b7913b04c54574d18c28d46e6395428ab.png",
+       "root_id":null,
+       "link_tag_id":null,
+       "position":0,
+       "own_app":"xa-site",
+       "tag_class_id":1
+    },
+    {  
+       "id":2,
+       "value":"Machine1",
+       "root_id":null,
+       "link_tag_id":null,
+       "position":1,
+       "own_app":"xa-site",
+       "tag_class_id":1001
+    }
+ ]

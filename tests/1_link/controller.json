@@ -1,0 +1,12 @@
+{  
+    "id":"controller00001",
+    "link":{  
+       "instance":"/class/controller/instance/controller00001",
+       "latest":"/class/controller/instance/controller00001/latest",
+       "history":"/class/controller/instance/controller00001/history",
+       "moments":"/class/controller/instance/controller00001/moments",
+       "relations":"/class/controller/instance/controller00001/relations",
+       "count":"/class/controller/instance/controller00001/count"
+    },
+    "name":"cnc"
+ }
