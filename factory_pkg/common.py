@@ -15,7 +15,21 @@ DEFAULT_API_SITE = "api-rest:8083/field_api/v3"
 ################################################
 # Reqeusts
 
-def make_request(url):
+def make_request(url) -> dict:
+    """
+    The make_request is an abstraction of requests.get and json.loads that catches asserts for graceful fail in the web app.
+
+    Parameters
+    ----------
+    url : str
+        the url to retrieve
+    
+    Output
+    ----------
+    response : dict
+        A dictionary or nested dictionary from the json response.
+
+    """
     
     dictionary = {}
     valid = False
@@ -37,7 +51,23 @@ def make_request(url):
     
     return dictionary, valid
 
-def concat_paths(sequence):
+
+def concat_paths(sequence) -> str:
+    """
+    Corrects paths/concatenates paths with slashes to make proper url paths.
+
+    Parameters
+    ----------
+    sequence : list
+        a list of sections to concatenate to a url path
+    
+    Output
+    ----------
+    response : str
+        The fully concatenated url path
+
+    """
+
     logger.debug('common.concat_paths: %s', sequence)
     result = []
     for path in sequence:
@@ -48,7 +78,25 @@ def concat_paths(sequence):
     logger.debug('common.concat_paths: %s', ret)
     return ret
 
-def easy_url(path_parts, netlocation = DEFAULT_API_SITE):
+
+def easy_url(path_parts, netlocation = DEFAULT_API_SITE) -> str:
+    """
+    An abstraction of urlunsplit to eaily construct complete urls given the rest api pattern
+
+    Parameters
+    ----------
+    path_parts : list
+        a list of sections to concatenate to a url path
+    netlocation : str
+        the domain location of the rest-api
+    
+    Output
+    ----------
+    response : str
+        The fully constructed url
+
+    """
+
     logger.debug('common.easy_url: %s', path_parts)
     scheme = 'http'
     netloc = netlocation
@@ -59,7 +107,22 @@ def easy_url(path_parts, netlocation = DEFAULT_API_SITE):
     logger.debug('common.easy_url: %s', ret)
     return ret
 
-def json_from_path(path):
+def json_from_path(path) -> dict:
+    """
+    An wrapper for make_request and easy_url
+
+    Parameters
+    ----------
+    path : str
+        a list of sections to concatenate to a url path
+    
+    Output
+    ----------
+    response : str
+        The dictionary response from the api request
+
+    """
+
     logger.debug('common.json_from_path: %s', path)
     response, valid = make_request(easy_url(path))
     logger.debug('common.json_from_path: valid=%s', valid)
@@ -70,7 +133,24 @@ def json_from_path(path):
 ################################################
 # Moments
 
-def moments_parser(data, label):
+def moments_parser(data, label) -> dict:
+    """
+    moments are returned from the rest api as a dictionary.  The moments parser returns a dictionary that only contains the specified label
+
+    Parameters
+    ----------
+    data : dict
+        The complete dictionary
+    label : str
+        The key value of moments to parse from the dictionary
+    
+    Output
+    ----------
+    response : dict
+        A dictionary containing only the moments with the key matching the specified label
+
+    """
+
     ret = {}
     for moment in data:
         ret[moment["unixtime"]] = moment["moment"][label]
