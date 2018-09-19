@@ -5,4 +5,4 @@ cache: pip
 install:
   - pip install -e .
 script:
-  - python tests/1_link.py
+  - python ./tests/1_link/link_test.py
