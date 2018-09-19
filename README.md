@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/ellisware/factory_pkg.svg?branch=master)](https://travis-ci.org/ellisware/factory_pkg)
+
 # Factory Package
 
 This packages models (oop) a generic OAS REST API in python, abstracting the interface to a higher level for the python programmer.
