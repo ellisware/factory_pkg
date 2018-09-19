@@ -28,7 +28,7 @@ class LinkTest(unittest.TestCase):
 
 
         # Load Mock REST API responses
-        link_response = os.path.join('', "controller.json")
+        link_response = os.path.join('.', "controller.json")
 
         with open(link_response) as f:
             link_json = f.read()
