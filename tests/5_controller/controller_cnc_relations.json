@@ -67,39 +67,6 @@
     ],
     "controller_cnc_axis":[  
        {  
-          "id":"controller_cnc_axis00003",
-          "link":{  
-             "instance":"/class/controller_cnc_axis/instance/controller_cnc_axis00003",
-             "latest":"/class/controller_cnc_axis/instance/controller_cnc_axis00003/latest",
-             "history":"/class/controller_cnc_axis/instance/controller_cnc_axis00003/history",
-             "moments":"/class/controller_cnc_axis/instance/controller_cnc_axis00003/moments",
-             "relations":"/class/controller_cnc_axis/instance/controller_cnc_axis00003/relations",
-             "count":"/class/controller_cnc_axis/instance/controller_cnc_axis00003/count"
-          }
-       },
-       {  
-          "id":"controller_cnc_axis00004",
-          "link":{  
-             "instance":"/class/controller_cnc_axis/instance/controller_cnc_axis00004",
-             "latest":"/class/controller_cnc_axis/instance/controller_cnc_axis00004/latest",
-             "history":"/class/controller_cnc_axis/instance/controller_cnc_axis00004/history",
-             "moments":"/class/controller_cnc_axis/instance/controller_cnc_axis00004/moments",
-             "relations":"/class/controller_cnc_axis/instance/controller_cnc_axis00004/relations",
-             "count":"/class/controller_cnc_axis/instance/controller_cnc_axis00004/count"
-          }
-       },
-       {  
-          "id":"controller_cnc_axis00002",
-          "link":{  
-             "instance":"/class/controller_cnc_axis/instance/controller_cnc_axis00002",
-             "latest":"/class/controller_cnc_axis/instance/controller_cnc_axis00002/latest",
-             "history":"/class/controller_cnc_axis/instance/controller_cnc_axis00002/history",
-             "moments":"/class/controller_cnc_axis/instance/controller_cnc_axis00002/moments",
-             "relations":"/class/controller_cnc_axis/instance/controller_cnc_axis00002/relations",
-             "count":"/class/controller_cnc_axis/instance/controller_cnc_axis00002/count"
-          }
-       },
-       {  
           "id":"controller_cnc_axis00001",
           "link":{  
              "instance":"/class/controller_cnc_axis/instance/controller_cnc_axis00001",

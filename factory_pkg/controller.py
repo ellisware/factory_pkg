@@ -70,7 +70,7 @@ class Controller_latest:
             self._controller_type = latest["controller_type"]
             self._model = latest["model"]
             self._ip_address = latest["ip_address"]
-        
+
     def manufacturer(self):
         """ returns the manufacturer, update() if not present"""
 
@@ -148,19 +148,11 @@ class Controller:
 
         self._path = controller_path
         self._link = link.Link(self._path)
-        self._latest = ""
-        self._relations = ""
-        
-
-    def update(self):
-        """Calls the rest api and updates the instance attributes"""
-
         self._latest = Controller_latest(self._link.latest())
         self._relations = relations.Relations(self._link.relations())
+
 
     def latest(self):
         """ return an instance of latest class, update() if not present"""
 
-        if not self._latest:
-            self.update()
         return self._latest

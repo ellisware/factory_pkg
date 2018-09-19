@@ -1,0 +1,8 @@
+language: python
+python:
+  - "3.7"
+cache: pip
+install:
+  - pip install -e ./factory_pkg
+script:
+  - python tests/1_link.py
