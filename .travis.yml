@@ -3,6 +3,6 @@ python:
   - "3.6"
 cache: pip
 install:
-  - pip install -e ./factory_pkg
+  - pip install -e
 script:
   - python tests/1_link.py
