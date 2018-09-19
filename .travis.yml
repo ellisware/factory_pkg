@@ -5,5 +5,8 @@ cache: pip
 install:
   - pip install -e .
   - pip install httpretty
+env:
+  - TEST_DIR = "./test/1_link/"
 script:
-  - python ./tests/1_link/link_test.py
+  - cd $TEST_DIR
+  - python ./link_test.py
