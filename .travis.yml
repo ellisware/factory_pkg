@@ -5,6 +5,9 @@ cache: pip
 install:
   - pip install -e .
   - pip install httpretty
+env:
+  #TEST_DIR = /tests/1_link/
+  #TEST_DIR = /tests/2_relations/
 script:
   - echo $TRAVIS_BUILD_DIR/tests/1_link/test.py
-  - $TRAVIS_BUILD_DIR/tests/1_link/test.py
+  - python $TRAVIS_BUILD_DIR/tests/1_link/test.py
