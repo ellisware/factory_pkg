@@ -7,4 +7,4 @@ install:
   - pip install httpretty
 script:
   - echo $TRAVIS_BUILD_DIR/tests/1_link/test.py
-  - cd $TRAVIS_BUILD_DIR/tests/1_link/test.py && ls
+  - $TRAVIS_BUILD_DIR/tests/1_link/test.py
