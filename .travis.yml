@@ -6,4 +6,4 @@ install:
   - pip install -e .
   - pip install httpretty
 script:
-  - cd $TRAVIS_BUILD_DIR && python /factory_pkg/tests/1_link/test.py
+  - cd $TRAVIS_BUILD_DIR && python ./factory_pkg/tests/1_link/test.py
