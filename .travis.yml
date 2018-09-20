@@ -9,5 +9,7 @@ env:
   TEST_DIR = tests/1_link
   #TEST_DIR = /tests/2_relations/
 script:
-  - ./build.sh
+  - echo  $TRAVIS_BUILD_DIR
+  - cd $TRAVIS_BUILD_DIR && ls
+  - cd $TRAVIS_BUILD_DIR && ./build.sh
 #  - python $TRAVIS_BUILD_DIR/tests/1_link/test.py
