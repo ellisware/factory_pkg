@@ -11,4 +11,4 @@ env:
 before-script:
   - cd 
 script:
-  - cd $TRAVIS_BUILD_DIR/$TEST_DIR && ls
+  - cd $TRAVIS_BUILD_DIR && cd $TEST_DIR && ls
