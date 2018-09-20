@@ -9,4 +9,4 @@ env:
   - TEST_DIR = tests/1_link
   - TEST_DIR = tests/2_relations
 script:
-  - cd $TEST_DIR && python test.py
+  - cd $TEST_DIR && ls
