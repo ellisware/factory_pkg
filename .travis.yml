@@ -7,7 +7,9 @@ install:
   - pip install httpretty
 env:
   TEST_DIR="tests/1_link"
-  #TEST_DIR = /tests/2_relations/
+  TEST_DIR="tests/2_relations"
+  TEST_DIR="tests/3_axis"
+  TEST_DIR="tests/4_cnc"
+  TEST_DIR="tests/5_controller"
 script:
   - cd $TRAVIS_BUILD_DIR && ./build.sh
-#  - python $TRAVIS_BUILD_DIR/tests/1_link/test.py
