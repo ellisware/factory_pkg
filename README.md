@@ -1,21 +1,90 @@
-[![Build Status](https://travis-ci.org/ellisware/factory_pkg.svg?branch=master)](https://travis-ci.org/ellisware/factory_pkg)
+[![Travis CI](https://travis-ci.org/ellisware/factory_pkg.svg?branch=master)](https://travis-ci.org/ellisware/factory_pkg)
 
-# Factory Package
+# Factory_pkg
 
-This packages models (oop) a generic OAS REST API in python, abstracting the interface to a higher level for the python programmer.
+Factory_pkg is a python package that simplifies data reading from the FANUC FIELD System common data model.  The package allows data access through python based object oriented programming instead of the more generic and cumbersome relational(OAS) REST-API.  
+
+Python is an excellent tool for processing the large amounts of data collected in the edge based FIELD platform.
+
+## Getting Started
+
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+
+### Prerequisites
 
 
-Local Setup and Usage(Development Mode)
-	pip install -e <path>
+```
+Python 3.6 (Anaconda Recommended)
+```
+
+### Installing
+
+With large portions of the REST-API still to be covered, the package is only available as source code currently.  The source code will be installed in debug mode so that changes made to the package are reflected in its usage.
+
+Download the Package or clone the repository. (Optionally create a new environment before downloading and installing)
+
+```
+git clone https://github.com/ellisware/factory_pkg
+```
+
+Change to the root directory of the package (where setup.py is located)
+
+```
+cd factory_pkg 
+``` 
+
+Run pip to install the package in debug mode using the specification in setup.py.
+
+```
+pip install -e
+``` 
 
 
 
 
-Packaging for Distro
+Once the package is installed it can be used by importing the library.
 
-Install latest Tool Chain
-	python3 -m pip install --user --upgrade setuptools wheel
+example.py
+```
+Import factory_pkg as fp
+```
 
-Create the distribution (From package root directory)
-	python2 setup.py sdist bdist_wheel
+The first step is to retrieve the site information which is used to identify the factory hierarchy. 
+
+example.py
+```
+…
+factory = fp.site.Site()
+…
+```
+
+Then the node information can be used. 
+
+example.py
+```
+…
+for each n in factory.nodes:
+   print n.controller_id
+…
+```
+
+
+## Running the tests
+
+All unit tests are located under the tests directory. Simply navigate to each directory and run test.py for that test.
+
+
+## Contributing
+
+Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
+
+
+## Authors
+
+* **Mike Ellis** - *Initial work* - [Other repositories](https://github.com/ellisware.com)
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
 
