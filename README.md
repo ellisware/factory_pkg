@@ -46,7 +46,7 @@ Once the package is installed it can be used by importing the library.
 
 example.py:
 ```
-import factory_pkg as fp
+from factory_pkg import site
 ```
 
 The first step is to retrieve the site information which is used to identify the factory hierarchy.
@@ -54,8 +54,8 @@ The first step is to retrieve the site information which is used to identify the
 example.py:
 ```
 …
-factory = fp.site.Site() # for default xa-site
-factory = fp.site.Site("http:\\192.168.88.88\field-api\v3") # for vm at 192.168.88.88
+factory = site.Site() # for default xa-site
+factory = site.Site("192.168.99.101:40001/v1") # for dev vm at 192.168.99.101
 …
 ```
 
@@ -64,8 +64,8 @@ Then the node information can be used.
 example.py:
 ```
 …
-for each controller in factory.nodes:
-   print controller.controller_id
+for controller in factory.nodes():
+	print(controller.controller_id())
 …
 ```
 

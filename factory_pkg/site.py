@@ -155,7 +155,7 @@ class Site:
         nodes_dict, valid = common.make_request(node_url)
         if valid:
             for node in nodes_dict:
-                url = common.easy_url(["nodes", node["id"]], self._path)
+                url = common.easy_url(["nodes", str(node["id"])], self._path)
                 temp_node = Node(url)
                 self._nodes.append(temp_node)
 
@@ -163,7 +163,7 @@ class Site:
         tag_dict, valid = common.make_request(tag_url)
         if valid:
             for tag in tag_dict:
-                url = common.easy_url(["tag", tag["id"]], self._path)
+                url = common.easy_url(["tag", str(tag["id"])], self._path)
                 temp_tag = Tag(tag)
                 self._tags.append(temp_tag)
 
