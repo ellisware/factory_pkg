@@ -1,8 +1,8 @@
 [![Travis CI](https://travis-ci.org/ellisware/factory_pkg.svg?branch=master)](https://travis-ci.org/ellisware/factory_pkg)
 
-# Factory_pkg
+# factory_pkg
 
-Factory_pkg is a python package that simplifies data reading from the FANUC FIELD System common data model.  The package allows data access through python based object oriented programming instead of the more generic and cumbersome relational(OAS) REST-API.  
+Factory_pkg is a python package that simplifies data reading from the FANUC FIELD System common data model.  The package allows data access through python based object oriented programming instead of the more generic and cumbersome relational(OAS) REST-API. 
 
 Python is an excellent tool for processing the large amounts of data collected in the edge based FIELD platform.
 
@@ -44,30 +44,34 @@ pip install -e
 
 Once the package is installed it can be used by importing the library.
 
-example.py
+example.py:
 ```
-Import factory_pkg as fp
+import factory_pkg as fp
 ```
 
-The first step is to retrieve the site information which is used to identify the factory hierarchy. 
+The first step is to retrieve the site information which is used to identify the factory hierarchy.
 
-example.py
+example.py:
 ```
 …
-factory = fp.site.Site()
+factory = fp.site.Site() # for default xa-site
+factory = fp.site.Site("http:\\192.168.88.88\field-api\v3") # for vm at 192.168.88.88
 …
 ```
 
 Then the node information can be used. 
 
-example.py
+example.py:
 ```
 …
-for each n in factory.nodes:
-   print n.controller_id
+for each controller in factory.nodes:
+   print controller.controller_id
 …
 ```
 
+## Design Notes
+
+Additionally, the package uses the [Lazy Initialization](https://en.wikipedia.org/wiki/Lazy_initialization#Python) design pattern to improve effeciency and responsivness to the end user.  Additionally, the package uses the [Facade](https://en.wikipedia.org/wiki/Facade_pattern#Python) design pattern to aggregate the underlying REST-API data.
 
 ## Running the tests
 
@@ -76,7 +80,7 @@ All unit tests are located under the tests directory. Simply navigate to each di
 
 ## Contributing
 
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
+Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details and the process for submitting pull requests to us.
 
 
 ## Authors
