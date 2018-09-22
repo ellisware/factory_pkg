@@ -16,33 +16,33 @@ class Link:
     Attributes
     ----------
     _path : str
-    the original path to the class passed at init
+        the original path to the class passed at init
     _latest : str
-    the url path for the latest class
+        the url path for the latest class
     _history :  str
-    the url path for the history class
+        the url path for the history class
     _moments : str
-    the url path for the moments class
+        the url path for the moments class
     _relations : str
-    the url path for the relations class
+        the url path for the relations class
     _count : str
-    the url path for the count class
+        the url path for the count class
 
 
     Methods
     -------
     update()
-    calls the rest api to update the stored attributes
+        calls the rest api to update the stored attributes
     latest()
-    returns the stored latest url
+        returns the stored latest url
     history()
-    returns the stored history url
+        returns the stored history url
     moments()
-    returns the stored moments url
+        returns the stored moments url
     relations()
-    returns the stored relations url
+        returns the stored relations url
     count()
-    returns the stored count url
+        returns the stored count url
     """
 
     def __init__(self, link_path):
