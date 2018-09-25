@@ -71,7 +71,9 @@ for controller in factory.nodes():
 
 ## Design Notes
 
-Additionally, the package uses the [Lazy Initialization](https://en.wikipedia.org/wiki/Lazy_initialization#Python) design pattern to improve effeciency and responsivness to the end user.  Additionally, the package uses the [Facade](https://en.wikipedia.org/wiki/Facade_pattern#Python) design pattern to aggregate the underlying REST-API data.
+Additionally, the package uses the [Lazy Initialization](https://en.wikipedia.org/wiki/Lazy_initialization#Python) design pattern to improve effeciency and responsivness to the end user.  Additionally, the package uses the [Facade](https://en.wikipedia.org/wiki/Facade_pattern#Python) design pattern to aggregate the underlying REST-API data.  
+
+Much of this code base is contrary to the python principles of flat, beautiful code.  This is due to the underlying class representation of the FIELD api.  The FIELD class representation works very well for the relational data it represents.  The goal of this abstraction then includes allowing software to consume the package in a very pythonic way.
 
 ## Running the tests
 
