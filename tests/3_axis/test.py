@@ -11,7 +11,7 @@ from factory_pkg import site
 from factory_pkg import link
 from factory_pkg import controller
 from factory_pkg import relations
-from factory_pkg.cnc import axis
+from factory_pkg import axis
 
 logger = logging.getLogger()
 logger.level = logging.DEBUG

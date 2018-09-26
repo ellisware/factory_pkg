@@ -1,7 +1,7 @@
 from factory_pkg import link
 from factory_pkg import relations
 from factory_pkg import common
-from factory_pkg.cnc import axis
+from factory_pkg import axis
 import logging
 
 logger = logging.getLogger(__name__)
